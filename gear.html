@@ -37,12 +37,12 @@
     <!-- Header & Navigation -->
     <header class="bg-gray-900 shadow-xl sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-black text-white tracking-widest">TITAN 30L</h1>
+            <h1 class="text-2xl font-black text-white tracking-widest">GEARUP</h1>
             <!-- UPDATED Navigation links -->
             <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#products" class="hover:text-amber-500 transition duration-150">Lineup</a>
                 <a href="#features" class="hover:text-amber-500 transition duration-150">Features</a>
                 <a href="#gallery" class="hover:text-amber-500 transition duration-150">Gallery</a>
-                <a href="#specs" class="hover:text-amber-500 transition duration-150">Specs</a>
                 <a href="#reviews" class="hover:text-amber-500 transition duration-150">Reviews</a>
                 <a href="#buy" class="btn-accent px-4 py-2 rounded-lg font-bold">Order Now</a>
             </div>
@@ -53,16 +53,16 @@
         </nav>
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <a href="#products" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Lineup</a>
             <a href="#features" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Features</a>
             <a href="#gallery" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Gallery</a>
-            <a href="#specs" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Specifications</a>
             <a href="#reviews" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Reviews</a>
             <a href="#buy" class="block px-4 py-3 text-sm bg-amber-600 hover:bg-amber-500 font-bold transition duration-150">Order Now</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section - Focus on the Main Product (Titan 30L) -->
         <section class="max-w-7xl mx-auto pt-16 pb-20 px-4 sm:px-6 lg:px-8 text-center md:text-left">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Product Image Placeholder -->
@@ -77,25 +77,97 @@
 
                 <!-- Product Text Content -->
                 <div>
-                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-2 block">New Release | Tactical Series</span>
+                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-2 block">Featured Flagship | Tactical Series</span>
                     <h2 class="text-5xl lg:text-7xl font-extrabold text-white mb-4 leading-tight">
                         The Titan 30L
                     </h2>
                     <p class="text-xl text-gray-400 mb-8">
-                        Unmatched **durability** and **modular storage** built for the field. Carry your essential gear without compromise.
+                        The perfect balance of **durability**, **capacity**, and **modular storage** built for the field and daily carry.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#buy" class="btn-accent px-8 py-4 rounded-xl text-lg font-extrabold shadow-lg">
-                            Get Yours for $189.99
+                            Get Titan for $189.99
                         </a>
                         <a href="#features" class="bg-gray-700 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-600 transition shadow-lg">
-                            View Details
+                            Titan Features
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <!-- NEW SECTION 4: Product Lineup Overview -->
+        <section id="products" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-700">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-4xl font-bold text-center mb-6 text-white">Explore the GearUp Lineup</h3>
+                <p class="text-center text-lg text-gray-400 mb-12">Find the pack that perfectly fits your mission.</p>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Product Card 1: Scout 15L (Small EDC) -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl flex flex-col h-full hover:bg-gray-700 transition duration-300">
+                        <img
+                            src="https://placehold.co/400x400/1f2937/ffffff?text=SCOUT+15L+SLING"
+                            alt="Scout 15L EDC Sling"
+                            class="rounded-lg mb-4 w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/1f2937/ffffff?text=SCOUT+15L+SLING+LOADING+ERROR';"
+                        />
+                        <h4 class="text-2xl font-bold text-white mb-2">Scout 15L EDC Sling</h4>
+                        <p class="text-amber-500 font-semibold mb-4">$99.99</p>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            Lightweight and agile, designed for everyday carry (EDC) essentials. Features quick-access pockets and anti-theft design.
+                        </p>
+                        <ul class="text-gray-500 text-xs mb-4">
+                            <li><span class="text-green-400 mr-1">&#x2713;</span> Quick Access</li>
+                            <li><span class="text-green-400 mr-1">&#x2713;</span> Cross-Body/Sling</li>
+                        </ul>
+                        <a href="#" class="btn-accent text-center px-4 py-3 rounded-lg font-bold mt-auto">View Scout 15L</a>
+                    </div>
 
+                    <!-- Product Card 2: Titan 30L (Mid-Size Featured) -->
+                    <div class="bg-gray-700 p-6 rounded-xl shadow-2xl flex flex-col h-full border-4 border-amber-600 transition duration-300 transform scale-105">
+                        <img
+                            src="https://placehold.co/400x400/374151/ffffff?text=TITAN+30L+GEAR+PACK"
+                            alt="Titan 30L Tactical Backpack"
+                            class="rounded-lg mb-4 w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/374151/ffffff?text=TITAN+30L+GEAR+PACK+LOADING+ERROR';"
+                        />
+                        <h4 class="text-2xl font-bold text-white mb-2">Titan 30L Tactical Pack</h4>
+                        <p class="text-amber-500 font-semibold mb-4">$189.99</p>
+                        <p class="text-gray-300 text-sm mb-4 flex-grow">
+                            Our best-seller. The ultimate hybrid pack for travel, tactical use, and rugged day trips. Full MOLLE compatibility.
+                        </p>
+                        <ul class="text-gray-500 text-xs mb-4">
+                            <li><span class="text-green-400 mr-1">&#x2713;</span> Modular MOLLE System</li>
+                            <li><span class="text-green-400 mr-1">&#x2713;</span> Clamshell Opening</li>
+                        </ul>
+                        <a href="#features" class="bg-white text-gray-900 text-center px-4 py-3 rounded-lg font-bold mt-auto hover:bg-gray-200">View Titan Details</a>
+                    </div>
+                    
+                    <!-- Product Card 3: Aegis 50L (Large Expedition) -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl flex flex-col h-full hover:bg-gray-700 transition duration-300">
+                        <img
+                            src="https://placehold.co/400x400/1f2937/ffffff?text=AEGIS+50L+EXPEDITION"
+                            alt="Aegis 50L Expedition Pack"
+                            class="rounded-lg mb-4 w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/1f2937/ffffff?text=AEGIS+50L+EXPEDITION+LOADING+ERROR';"
+                        />
+                        <h4 class="text-2xl font-bold text-white mb-2">Aegis 50L Expedition Pack</h4>
+                        <p class="text-amber-500 font-semibold mb-4">$299.99</p>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">
+                            High-capacity pack for multi-day treks. Features an internal frame, adjustable harness, and dedicated sleeping bag compartment.
+                        </p>
+                        <ul class="text-gray-500 text-xs mb-4">
+                            <li><span class="text-green-400 mr-1">&#x2713;</span> Adjustable Internal Frame</li>
+                            <li><span class="text-green-400 mr-1">&#x2713;</span> 50L Capacity</li>
+                        </ul>
+                        <a href="#" class="btn-accent text-center px-4 py-3 rounded-lg font-bold mt-auto">View Aegis 50L</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
         <!-- NEW SECTION 1: Product Gallery (In-Action Shots) -->
         <section id="gallery" class="py-20 bg-gray-900 border-t border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +192,7 @@
         <!-- Feature Highlights Section (Existing) -->
         <section id="features" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-700">
             <div class="max-w-7xl mx-auto">
-                <h3 class="text-4xl font-bold text-center mb-12 text-white">Engineered for Extremes</h3>
+                <h3 class="text-4xl font-bold text-center mb-12 text-white">Titan 30L Engineered for Extremes</h3>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Feature 1: Durability -->
@@ -200,7 +272,7 @@
 
         <!-- Specifications Section (Existing) -->
         <section id="specs" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
-            <h3 class="text-4xl font-bold text-center mb-12 text-white">Full Specifications</h3>
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Titan 30L Full Specifications</h3>
             <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden max-w-3xl mx-auto">
                 <dl class="divide-y divide-gray-700">
                     <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
