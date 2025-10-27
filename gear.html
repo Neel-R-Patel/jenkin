@@ -36,6 +36,11 @@
         .bg-lk-secondary {
             background-color: #eff6ff; /* Lightest blue for card backgrounds */
         }
+        /* Gold Accent for Membership */
+        .gold-accent {
+            background-color: #fcd34d; /* Amber/Gold */
+            color: #78350f;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -47,11 +52,13 @@
             <div class="flex items-center space-x-2">
                 <span class="text-3xl font-extrabold lk-accent tracking-tighter">LENSKART</span>
             </div>
-            <!-- Navigation Links -->
+            <!-- Navigation Links - UPDATED -->
             <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
                 <a href="#products" class="hover:text-blue-600 transition duration-150">Eyeglasses</a>
                 <a href="#sunglasses" class="hover:text-blue-600 transition duration-150">Sunglasses</a>
                 <a href="#contact-lenses" class="hover:text-blue-600 transition duration-150">Contact Lenses</a>
+                <a href="#bestsellers" class="hover:text-blue-600 transition duration-150">Trending</a>
+                <a href="#gold" class="hover:text-blue-600 transition duration-150">Gold Membership</a>
                 <a href="#try-on" class="hover:text-blue-600 transition duration-150">3D Try-On</a>
             </div>
             <!-- CTA -->
@@ -118,6 +125,58 @@
             </div>
         </section>
 
+        <!-- NEW SECTION 1: Trending Styles / Best Sellers -->
+        <section id="bestsellers" class="py-20 bg-gray-100 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Trending Styles</h3>
+                <p class="text-lg text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+                    Check out what everyone is buying right now. These are our most popular and highly-rated frames.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Product Card 1: Rectangle -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x250/f0f0f0/3b82f6?text=Rectangle+Frames" alt="Classic Rectangle Eyeglasses" class="w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/f0f0f0/3b82f6?text=Rectangle+Frames';" />
+                        <div class="p-4 text-center">
+                            <h4 class="font-semibold text-gray-900">Airflex Rectangular</h4>
+                            <p class="text-sm text-gray-500 mb-2">Eyeglasses</p>
+                            <span class="text-lg font-bold lk-accent">$1,499</span>
+                        </div>
+                    </div>
+                    <!-- Product Card 2: Aviator -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x250/f0f0f0/f59e0b?text=Aviator+Sunglasses" alt="Stylish Aviator Sunglasses" class="w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/f0f0f0/f59e0b?text=Aviator+Sunglasses';" />
+                        <div class="p-4 text-center">
+                            <h4 class="font-semibold text-gray-900">Polarized Aviator</h4>
+                            <p class="text-sm text-gray-500 mb-2">Sunglasses</p>
+                            <span class="text-lg font-bold text-yellow-600">$1,999</span>
+                        </div>
+                    </div>
+                    <!-- Product Card 3: Cat Eye -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x250/f0f0f0/d946ef?text=Cat+Eye+Frames" alt="Fashionable Cat Eye Frames" class="w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/f0f0f0/d946ef?text=Cat+Eye+Frames';" />
+                        <div class="p-4 text-center">
+                            <h4 class="font-semibold text-gray-900">Vogue Cat-Eye</h4>
+                            <p class="text-sm text-gray-500 mb-2">Eyeglasses</p>
+                            <span class="text-lg font-bold text-purple-600">$1,750</span>
+                        </div>
+                    </div>
+                    <!-- Product Card 4: Wayfarer -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://placehold.co/400x250/f0f0f0/10b981?text=Wayfarer+Frames" alt="Trendy Wayfarer Style" class="w-full h-32 md:h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x250/f0f0f0/10b981?text=Wayfarer+Frames';" />
+                        <div class="p-4 text-center">
+                            <h4 class="font-semibold text-gray-900">Progear Wayfarer</h4>
+                            <p class="text-sm text-gray-500 mb-2">Sunglasses</p>
+                            <span class="text-lg font-bold text-green-600">$1,299</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                     <a href="#" class="lk-accent border border-blue-500 px-6 py-3 rounded-full text-lg font-semibold inline-block hover:bg-lk-secondary transition">See All Trending Products</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Key Features/USPs Section -->
         <section id="try-on" class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
@@ -158,6 +217,87 @@
                 </div>
             </div>
         </section>
+
+        <!-- NEW SECTION 2: Customer Testimonials -->
+        <section id="reviews" class="py-20 px-4 sm:px-6 lg:px-8">
+             <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Customers Say</h3>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"The 3D try-on tool was a game-changer! I finally found frames that suit my face perfectly without leaving my office."</p>
+                        <p class="font-semibold text-sm text-gray-900">- Sarah K., Developer</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star-half" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"Fast shipping and the quality for the price is unmatched. I highly recommend the Airflex range for daily wear."</p>
+                        <p class="font-semibold text-sm text-gray-900">- Omar P., Student</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                        <div class="flex items-center text-yellow-400 mb-3">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"I use the Lenskart Gold membership and the BOGO offer saves me a fortune every year. Best subscription I've ever bought."</p>
+                        <p class="font-semibold text-sm text-gray-900">- Priya M., Business Owner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: Lenskart Gold Membership -->
+        <section id="gold" class="py-20 bg-yellow-50 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="max-w-4xl mx-auto p-8 rounded-xl gold-accent shadow-2xl">
+                    <h3 class="text-4xl font-extrabold mb-4 text-amber-900">Unlock Lenskart Gold Membership</h3>
+                    <p class="text-xl text-amber-800 mb-8">
+                        Get exclusive benefits, including **Buy One Get One Free** on all frames, all year round!
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6 mb-10 text-amber-900">
+                        <div class="p-4 bg-white/70 rounded-lg shadow-md">
+                            <i data-lucide="gift" class="w-8 h-8 mx-auto mb-2 text-yellow-600"></i>
+                            <p class="font-bold text-lg">BOGO Free</p>
+                            <p class="text-sm">On Eyeglasses & Sunglasses</p>
+                        </div>
+                        <div class="p-4 bg-white/70 rounded-lg shadow-md">
+                            <i data-lucide="truck" class="w-8 h-8 mx-auto mb-2 text-yellow-600"></i>
+                            <p class="font-bold text-lg">Priority Support</p>
+                            <p class="text-sm">Dedicated Gold Customer Service</p>
+                        </div>
+                        <div class="p-4 bg-white/70 rounded-lg shadow-md">
+                            <i data-lucide="percent" class="w-8 h-8 mx-auto mb-2 text-yellow-600"></i>
+                            <p class="font-bold text-lg">Extra Discounts</p>
+                            <p class="text-sm">On Premium Lens Technology</p>
+                        </div>
+                    </div>
+                    <a href="#" class="bg-amber-700 text-white px-10 py-4 rounded-full text-xl font-extrabold shadow-lg transform hover:scale-[1.03] transition duration-300">
+                        Join Gold Today for $999 →
+                    </a>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Final Call To Action -->
         <section id="cta" class="py-24 bg-lk-accent/10">
