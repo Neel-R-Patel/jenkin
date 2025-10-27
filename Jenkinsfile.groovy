@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    S3_BUCKET = 'jnkin'          // your S3 bucket name
+    S3_BUCKET = 'jnkin/jn'          // your S3 bucket name
     CLOUDFRONT_ID = 'E3H5J8BMQF0AYA'          // your CloudFront Distribution ID
     AWS_REGION = 'us-east-1'                // your AWS region
   }
