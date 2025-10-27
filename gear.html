@@ -3,53 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASUS ROG Zephyrus G16 | Ultra-Slim Gaming Powerhouse</title>
+    <title>Lenskart | India's #1 Eyewear Destination</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script type="module">
+        import lucide from 'https://cdn.skypack.dev/lucide@latest';
+        lucide.createIcons();
+    </script>
+    <!-- Use Inter font and define Lenskart-inspired colors -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d0d0d; /* Deep charcoal background */
-            color: #f3f4f6; /* Light gray text */
+            background-color: #ffffff; /* Clean white background */
+            color: #1f2937; /* Dark gray text */
             line-height: 1.6;
         }
-        /* ROG Accent Color - Electric Red */
-        .rog-accent {
-            color: #ff003c;
+        /* Primary Accent Color - Vibrant Blue */
+        .lk-accent {
+            color: #3b82f6;
         }
-        .bg-rog-accent {
-            background-color: #ff003c;
+        .bg-lk-accent {
+            background-color: #3b82f6;
             transition: all 0.3s;
         }
-        .bg-rog-accent:hover {
-            background-color: #d10031;
-            box-shadow: 0 4px 20px rgba(255, 0, 60, 0.4);
+        .bg-lk-accent:hover {
+            background-color: #2563eb;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
         }
-        /* Custom gradient for feature cards */
-        .feature-card-bg {
-            background: linear-gradient(145deg, #1f2937, #111827);
+        /* Secondary Accent for Cards */
+        .bg-lk-secondary {
+            background-color: #eff6ff; /* Lightest blue for card backgrounds */
         }
     </style>
 </head>
 <body class="min-h-screen">
 
     <!-- Header & Navigation -->
-    <header class="bg-gray-900 shadow-2xl sticky top-0 z-50 border-b border-gray-800">
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo Placeholder (Lenskart Style) -->
             <div class="flex items-center space-x-2">
-                <span class="text-3xl font-black rog-accent tracking-widest">ROG</span>
-                <span class="text-xl font-light text-white">ZEPHYRUS G16</span>
+                <span class="text-3xl font-extrabold lk-accent tracking-tighter">LENSKART</span>
             </div>
             <!-- Navigation Links -->
-            <div class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#overview" class="hover:text-red-400 transition duration-150">Overview</a>
-                <a href="#specs" class="hover:text-red-400 transition duration-150">Specifications</a>
-                <a href="#gallery" class="hover:text-red-400 transition duration-150">Gallery</a>
-                <a href="#buy" class="bg-rog-accent text-white px-4 py-2 rounded-lg font-bold shadow-lg">Buy Now</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#products" class="hover:text-blue-600 transition duration-150">Eyeglasses</a>
+                <a href="#sunglasses" class="hover:text-blue-600 transition duration-150">Sunglasses</a>
+                <a href="#contact-lenses" class="hover:text-blue-600 transition duration-150">Contact Lenses</a>
+                <a href="#try-on" class="hover:text-blue-600 transition duration-150">3D Try-On</a>
             </div>
+            <!-- CTA -->
+            <a href="#cta" class="bg-lk-accent text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg hidden sm:block hover:shadow-xl">
+                Book Eye Checkup
+            </a>
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white focus:outline-none">
+            <button class="md:hidden text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
@@ -57,145 +67,116 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="overview" class="max-w-7xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-sm font-semibold uppercase tracking-widest mb-3 block text-gray-500">The Power of Choice. The Speed of Light.</span>
-            <h2 class="text-6xl sm:text-7xl lg:text-9xl font-extrabold text-white mb-6 leading-none">
-                ROG <span class="rog-accent">ZEPHYRUS</span> G16
+        <section id="hero" class="max-w-7xl mx-auto pt-16 pb-20 px-4 sm:px-6 lg:px-8 text-center bg-white">
+            <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Style Meets Sight. <span class="lk-accent block sm:inline">Find Your Perfect Pair.</span>
             </h2>
-            <p class="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto mb-12">
-                Ultra-slim. Ultra-powerful. Experience next-generation gaming performance in a chassis that redefines portability.
+            <p class="text-lg sm:text-xl text-gray-500 max-w-4xl mx-auto mb-10">
+                Explore the largest collection of trendy eyewear, backed by superior lens technology and unbelievable prices.
             </p>
 
-            <!-- Product Image Placeholder -->
-            <div class="rounded-xl shadow-2xl overflow-hidden mb-12 border-4 border-gray-800">
-                <img
-                    src="https://placehold.co/1200x675/171717/ff003c?text=ASUS+ROG+ZEPHYRUS+G16+-+14th+Gen+Intel"
-                    alt="ASUS ROG Zephyrus G16 Gaming Laptop"
-                    class="w-full object-cover"
-                    onerror="this.onerror=null; this.src='https://placehold.co/1200x675/171717/ff003c?text=IMAGE+LOADING+ERROR';"
-                />
-            </div>
-
-            <!-- Price & CTA -->
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <div class="text-4xl font-extrabold text-white">
-                    Starting at <span class="rog-accent">$2,199.99</span>
-                </div>
-                <a href="#buy" class="bg-rog-accent text-white px-10 py-4 rounded-xl text-xl font-bold shadow-xl transform hover:scale-[1.03] transition duration-300">
-                    Pre-Order Now
+            <!-- Main CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <input type="text" placeholder="Search for Frame Style (e.g., Cat-eye, Aviator)" class="w-full sm:w-96 px-6 py-3 border border-gray-300 rounded-full shadow-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" />
+                <a href="#products" class="w-full sm:w-auto bg-lk-accent text-white px-8 py-3 rounded-full text-lg font-bold shadow-xl transform hover:scale-[1.02] transition duration-300">
+                    Explore 1000+ Styles
                 </a>
             </div>
         </section>
 
-        <!-- Key Features Section (Grid) -->
-        <section id="features" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-800">
+        <!-- Product Categories Section -->
+        <section id="products" class="py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
-                <h3 class="text-4xl font-bold text-center mb-12 text-white">Engineered for Victory</h3>
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Shop By Category</h3>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature 1: Processor -->
-                    <div class="feature-card-bg p-6 rounded-xl shadow-2xl transition hover:shadow-red-500/30">
-                        <span class="rog-accent text-3xl font-extrabold block mb-2">CPU</span>
-                        <h4 class="text-xl font-bold mb-3 text-white">Core Power</h4>
-                        <p class="text-gray-400 text-sm">Intel Core Ultra 9 Processor. Dedicated NPU for AI workloads and optimized power efficiency.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Category 1: Eyeglasses -->
+                    <div class="bg-lk-secondary p-8 rounded-xl shadow-lg text-center transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i data-lucide="eye" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-900">Eyeglasses</h4>
+                        <p class="text-gray-600 mb-4">The ultimate selection of frames for every face shape and prescription need.</p>
+                        <a href="#" class="lk-accent font-semibold text-sm hover:underline">View Frames (Start $999) →</a>
                     </div>
 
-                    <!-- Feature 2: Display -->
-                    <div class="feature-card-bg p-6 rounded-xl shadow-2xl transition hover:shadow-red-500/30">
-                        <span class="rog-accent text-3xl font-extrabold block mb-2">OLED</span>
-                        <h4 class="text-xl font-bold mb-3 text-white">Nebula Display</h4>
-                        <p class="text-gray-400 text-sm">2.5K, 240Hz refresh rate OLED panel. Near-instant response time for zero motion blur.</p>
+                    <!-- Category 2: Sunglasses -->
+                    <div class="bg-lk-secondary p-8 rounded-xl shadow-lg text-center transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i data-lucide="sun-glasses" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-900">Sunglasses</h4>
+                        <p class="text-gray-600 mb-4">Protect your eyes in style with polarized and UV-protected sunwear.</p>
+                        <a href="#" class="lk-accent font-semibold text-sm hover:underline">Shop Latest Trends →</a>
                     </div>
 
-                    <!-- Feature 3: Graphics -->
-                    <div class="feature-card-bg p-6 rounded-xl shadow-2xl transition hover:shadow-red-500/30">
-                        <span class="rog-accent text-3xl font-extrabold block mb-2">GPU</span>
-                        <h4 class="text-xl font-bold mb-3 text-white">RTX 4090 Power</h4>
-                        <p class="text-gray-400 text-sm">Up to NVIDIA GeForce RTX 4090 Laptop GPU. Unrivaled ray tracing and DLSS 3 performance.</p>
-                    </div>
-
-                    <!-- Feature 4: Cooling -->
-                    <div class="feature-card-bg p-6 rounded-xl shadow-2xl transition hover:shadow-red-500/30">
-                        <span class="rog-accent text-3xl font-extrabold block mb-2">COOL</span>
-                        <h4 class="text-xl font-bold mb-3 text-white">Tri-Fan Technology</h4>
-                        <p class="text-gray-400 text-sm">Custom 3-fan cooling system with Liquid Metal compound on the CPU for extreme thermal efficiency.</p>
+                    <!-- Category 3: Contact Lenses -->
+                    <div class="bg-lk-secondary p-8 rounded-xl shadow-lg text-center transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i data-lucide="contact" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-900">Contact Lenses</h4>
+                        <p class="text-gray-600 mb-4">Daily, monthly, and toric lenses from top brands delivered to your doorstep.</p>
+                        <a href="#" class="lk-accent font-semibold text-sm hover:underline">Subscribe & Save →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Detailed Specifications Block -->
-        <section id="specs" class="max-w-5xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
-            <h3 class="text-4xl font-bold text-center mb-12 text-white">Detailed Technical Specifications</h3>
-            <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
-                <dl class="divide-y divide-gray-700">
-                    <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-gray-700 transition">
-                        <dt class="text-sm font-medium text-gray-400">Operating System</dt>
-                        <dd class="mt-1 text-sm text-white sm:col-span-2 sm:mt-0">Windows 11 Pro</dd>
-                    </div>
-                    <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-gray-700 transition">
-                        <dt class="text-sm font-medium text-gray-400">Memory (RAM)</dt>
-                        <dd class="mt-1 text-sm text-white sm:col-span-2 sm:mt-0">Up to 64GB LPDDR5X 7467MHz (Onboard)</dd>
-                    </div>
-                    <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-gray-700 transition">
-                        <dt class="text-sm font-medium text-gray-400">Storage</dt>
-                        <dd class="mt-1 text-sm text-white sm:col-span-2 sm:mt-0">Up to 4TB PCIe Gen4 SSD</dd>
-                    </div>
-                    <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-gray-700 transition">
-                        <dt class="text-sm font-medium text-gray-400">Chassis</dt>
-                        <dd class="mt-1 text-sm text-white sm:col-span-2 sm:mt-0">Premium Aluminum Alloy, 14.9mm Thin</dd>
-                    </div>
-                    <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-gray-700 transition">
-                        <dt class="text-sm font-medium text-gray-400">Weight</dt>
-                        <dd class="mt-1 text-sm text-white sm:col-span-2 sm:mt-0">Starting at 1.85 kg (4.08 lbs)</dd>
-                    </div>
-                    <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-gray-700 transition">
-                        <dt class="text-sm font-medium text-gray-400">Audio</dt>
-                        <dd class="mt-1 text-sm text-white sm:col-span-2 sm:mt-0">6-Speaker System with Dual Force-Cancelling Woofers</dd>
-                    </div>
-                </dl>
-            </div>
-        </section>
-
-        <!-- Product Gallery Section -->
-        <section id="gallery" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <!-- Key Features/USPs Section -->
+        <section id="try-on" class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
-                <h3 class="text-4xl font-bold text-center mb-12 text-white">Design Details</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Gallery Item 1: Keyboard -->
-                    <div class="rounded-xl overflow-hidden shadow-2xl aspect-video">
-                        <img src="https://placehold.co/600x400/222222/ffffff?text=RGB+Keyboard+Detail" alt="RGB Keyboard and Trackpad" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.onerror=null; this.src='https://placehold.co/600x400/222222/ffffff?text=RGB+Keyboard+Detail';" />
+                <h3 class="text-3xl font-bold text-center mb-16 text-gray-800">The Lenskart Advantage</h3>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Feature 1: 3D Try-On -->
+                    <div class="order-2 md:order-1">
+                        <span class="text-sm font-medium uppercase tracking-widest block mb-2 lk-accent">Innovation</span>
+                        <h4 class="text-4xl font-bold text-gray-900 mb-4">Virtual 3D Try-On</h4>
+                        <p class="text-gray-600 mb-6">See how frames look on your face, instantly and accurately, from the comfort of your home. Upload a picture or use your webcam for the perfect fit preview.</p>
+                        <a href="#" class="bg-lk-accent text-white px-6 py-3 rounded-full font-semibold inline-block hover:bg-blue-700 transition">Start Virtual Try-On</a>
                     </div>
-                    <!-- Gallery Item 2: Side Profile -->
-                    <div class="rounded-xl overflow-hidden shadow-2xl aspect-video">
-                        <img src="https://placehold.co/600x400/222222/ffffff?text=Thin+Side+Profile+and+Ports" alt="Ultra-slim side profile and I/O ports" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.onerror=null; this.src='https://placehold.co/600x400/222222/ffffff?text=Thin+Side+Profile+and+Ports';" />
+                    <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://placehold.co/600x400/3b82f6/ffffff?text=3D+Virtual+Try-On" 
+                            alt="Person using virtual 3D try on technology" 
+                            class="w-full h-auto object-cover" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/3b82f6/ffffff?text=3D+Virtual+Try-On';"
+                        />
                     </div>
-                    <!-- Gallery Item 3: Logo/Lid -->
-                    <div class="rounded-xl overflow-hidden shadow-2xl aspect-video">
-                        <img src="https://placehold.co/600x400/222222/ffffff?text=Lid+Logo+Design" alt="ROG logo on aluminum lid" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.onerror=null; this.src='https://placehold.co/600x400/222222/ffffff?text=Lid+Logo+Design';" />
+
+                    <!-- Feature 2: Home Try-On (Reverse order for visual rhythm) -->
+                    <div class="order-3 rounded-xl overflow-hidden shadow-2xl mt-12 md:mt-0">
+                        <img 
+                            src="https://placehold.co/600x400/f59e0b/ffffff?text=Home+Try+On+Service" 
+                            alt="Frame selection delivered for home trial" 
+                            class="w-full h-auto object-cover" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Home+Try+On+Service';"
+                        />
+                    </div>
+                    <div class="order-4">
+                        <span class="text-sm font-medium uppercase tracking-widest block mb-2 text-yellow-600">Convenience</span>
+                        <h4 class="text-4xl font-bold text-gray-900 mb-4">7-Day Home Trial</h4>
+                        <p class="text-gray-600 mb-6">Not sure? Select up to 4 frames and try them on at home for a full week, completely free. We make the decision easy.</p>
+                        <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold inline-block hover:bg-yellow-600 transition">Learn About Home Trial</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Final Call To Action -->
-        <section id="buy" class="py-24 bg-rog-accent/10">
+        <section id="cta" class="py-24 bg-lk-accent/10">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h3 class="text-4xl font-extrabold text-white mb-4">Unleash Your Potential.</h3>
-                <p class="text-xl text-gray-300 mb-8">
-                    The Zephyrus G16 is more than a laptop; it's a statement. Configure yours today and dominate the competition.
+                <h3 class="text-4xl font-extrabold text-gray-900 mb-4">Ready for Clear Vision?</h3>
+                <p class="text-xl text-gray-600 mb-8">
+                    Thousands of satisfied customers trust Lenskart for their eye care needs.
                 </p>
-                <a href="#" class="bg-rog-accent text-white px-12 py-5 rounded-xl text-xl font-extrabold shadow-2xl transform hover:scale-105 transition duration-300">
-                    Configure & Order Now →
+                <a href="#" class="bg-lk-accent text-white px-10 py-4 rounded-full text-xl font-extrabold shadow-2xl transform hover:scale-105 transition duration-300">
+                    Find Nearest Store or Order Online →
                 </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 ASUS ROG. All rights reserved. | Republic of Gamers.</p>
+    <footer class="bg-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Lenskart. All rights reserved. | Style your vision.</p>
         </div>
     </footer>
 </body>
