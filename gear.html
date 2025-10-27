@@ -30,6 +30,21 @@
             color: #ff5e00;
             opacity: 0.7;
         }
+        /* Style for color swatches */
+        .color-swatch {
+            width: 48px;
+            height: 48px;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .color-swatch:hover {
+            transform: scale(1.1);
+        }
+        .color-swatch.active {
+            border-color: #ff5e00;
+            box-shadow: 0 0 0 4px rgba(255, 94, 0, 0.5);
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -41,9 +56,11 @@
             <!-- UPDATED Navigation links -->
             <div class="hidden md:flex space-x-6 text-sm font-medium">
                 <a href="#products" class="hover:text-amber-500 transition duration-150">Lineup</a>
+                <a href="#colors" class="hover:text-amber-500 transition duration-150">Colors</a>
                 <a href="#features" class="hover:text-amber-500 transition duration-150">Features</a>
-                <a href="#gallery" class="hover:text-amber-500 transition duration-150">Gallery</a>
+                <a href="#guarantee" class="hover:text-amber-500 transition duration-150">Guarantee</a>
                 <a href="#reviews" class="hover:text-amber-500 transition duration-150">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition duration-150">FAQ</a>
                 <a href="#buy" class="btn-accent px-4 py-2 rounded-lg font-bold">Order Now</a>
             </div>
             <!-- Mobile Menu Button (Hamburger) -->
@@ -54,9 +71,11 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
             <a href="#products" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Lineup</a>
+            <a href="#colors" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Colors</a>
             <a href="#features" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Features</a>
-            <a href="#gallery" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Gallery</a>
+            <a href="#guarantee" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Guarantee</a>
             <a href="#reviews" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">Reviews</a>
+            <a href="#faq" class="block px-4 py-3 text-sm hover:bg-gray-700 transition duration-150">FAQ</a>
             <a href="#buy" class="block px-4 py-3 text-sm bg-amber-600 hover:bg-amber-500 font-bold transition duration-150">Order Now</a>
         </div>
     </header>
@@ -68,6 +87,7 @@
                 <!-- Product Image Placeholder -->
                 <div class="rounded-xl shadow-2xl overflow-hidden aspect-square flex items-center justify-center bg-gray-800 p-8 border border-gray-700">
                     <img
+                        id="hero-image"
                         src="https://placehold.co/600x600/374151/ffffff?text=TITAN+30L+GEAR+PACK"
                         alt="Titan 30L Tactical Backpack"
                         class="w-full h-full object-cover rounded-xl"
@@ -96,7 +116,7 @@
             </div>
         </section>
         
-        <!-- NEW SECTION 4: Product Lineup Overview -->
+        <!-- SECTION: Product Lineup Overview -->
         <section id="products" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-700">
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-4xl font-bold text-center mb-6 text-white">Explore the GearUp Lineup</h3>
@@ -168,7 +188,46 @@
             </div>
         </section>
         
-        <!-- NEW SECTION 1: Product Gallery (In-Action Shots) -->
+        <!-- NEW SECTION: Color Options -->
+        <section id="colors" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
+            <h3 class="text-4xl font-bold text-center mb-6 text-white">Choose Your Colorway</h3>
+            <p class="text-center text-lg text-gray-400 mb-12">Built tough, available in three low-profile tactical finishes.</p>
+            
+            <div class="flex justify-center space-x-8">
+                <!-- Color 1: Obsidian Black -->
+                <div class="text-center">
+                    <div 
+                        class="color-swatch rounded-full bg-gray-900 active" 
+                        data-color-name="Obsidian Black" 
+                        data-color-placeholder="https://placehold.co/600x600/111827/ffffff?text=TITAN+30L+BLACK"
+                        onclick="selectColor(this)">
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">Obsidian</p>
+                </div>
+                <!-- Color 2: Ranger Green -->
+                <div class="text-center">
+                    <div 
+                        class="color-swatch rounded-full bg-green-800" 
+                        data-color-name="Ranger Green" 
+                        data-color-placeholder="https://placehold.co/600x600/166534/ffffff?text=TITAN+30L+GREEN"
+                        onclick="selectColor(this)">
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">Ranger</p>
+                </div>
+                <!-- Color 3: Coyote Tan -->
+                <div class="text-center">
+                    <div 
+                        class="color-swatch rounded-full bg-yellow-700" 
+                        data-color-name="Coyote Tan" 
+                        data-color-placeholder="https://placehold.co/600x600/78350f/ffffff?text=TITAN+30L+COYOTE"
+                        onclick="selectColor(this)">
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">Coyote</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECTION: Product Gallery (In-Action Shots) -->
         <section id="gallery" class="py-20 bg-gray-900 border-t border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h3 class="text-4xl font-bold text-center mb-12 text-white">Titan in the Field</h3>
@@ -189,7 +248,7 @@
             </div>
         </section>
 
-        <!-- Feature Highlights Section (Existing) -->
+        <!-- SECTION: Feature Highlights -->
         <section id="features" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-700">
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-4xl font-bold text-center mb-12 text-white">Titan 30L Engineered for Extremes</h3>
@@ -231,7 +290,7 @@
                         <p class="text-gray-400 text-sm">A padded, quick-access compartment securely holds up to a 17-inch laptop or hydration bladder.</p>
                     </div>
                     
-                    <!-- NEW Feature 5: Hydration Port -->
+                    <!-- Feature 5: Hydration Port -->
                     <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-amber-600 transition hover:shadow-2xl hover:bg-gray-700">
                         <div class="text-amber-500 mb-4">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
@@ -240,7 +299,7 @@
                         <p class="text-gray-400 text-sm">Dedicated sealed port allows hands-free access to your hydration bladder tube during movement.</p>
                     </div>
                     
-                    <!-- NEW Feature 6: Quick-Release Buckles -->
+                    <!-- Feature 6: Quick-Release Buckles -->
                     <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-amber-600 transition hover:shadow-2xl hover:bg-gray-700">
                         <div class="text-amber-500 mb-4">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -249,7 +308,7 @@
                         <p class="text-gray-400 text-sm">High-strength buckles on load-bearing straps for rapid pack jettisoning in critical situations.</p>
                     </div>
                     
-                    <!-- NEW Feature 7: Hidden Security Pocket -->
+                    <!-- Feature 7: Hidden Security Pocket -->
                     <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-amber-600 transition hover:shadow-2xl hover:bg-gray-700">
                         <div class="text-amber-500 mb-4">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v5a2 2 0 01-2 2h-4a2 2 0 01-2-2v-5a2 2 0 012-2h4z"></path></svg>
@@ -265,7 +324,23 @@
             </div>
         </section>
 
-        <!-- NEW SECTION 2: Internal Organization -->
+        <!-- NEW SECTION: Our Commitment & Guarantee -->
+        <section id="guarantee" class="bg-gray-700 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-800">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="text-amber-500 mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.162a4.5 4.5 0 011.666 5.56 4.5 4.5 0 01-3.153 3.903 4.5 4.5 0 01-5.658-.75l-1.492 1.492-2.12-2.12 1.492-1.492a4.5 4.5 0 01-.75-5.658 4.5 4.5 0 013.903-3.153 4.5 4.5 0 015.56 1.666z"></path></svg>
+                </div>
+                <h3 class="text-4xl font-extrabold text-white mb-4">Lifetime Field-Tested Guarantee</h3>
+                <p class="text-lg text-gray-300 mb-8">
+                    We stand by the quality of the Titan 30L. Every pack is covered by our **GearUp Lifetime Warranty** against defects in materials and craftsmanship. If it fails due to how we made it, we'll repair or replace it—no questions asked.
+                </p>
+                <a href="#buy" class="bg-gray-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-gray-800 transition">
+                    Read Full Warranty Details
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION: Internal Organization -->
         <section id="internal" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
@@ -301,7 +376,7 @@
             </div>
         </section>
 
-        <!-- Specifications Section (Existing) -->
+        <!-- SECTION: Specifications -->
         <section id="specs" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
             <h3 class="text-4xl font-bold text-center mb-12 text-white">Titan 30L Full Specifications</h3>
             <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden max-w-3xl mx-auto">
@@ -330,7 +405,7 @@
             </div>
         </section>
         
-        <!-- NEW SECTION 3: Customer Reviews / Testimonials -->
+        <!-- SECTION: Customer Reviews / Testimonials -->
         <section id="reviews" class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-4xl font-bold text-center mb-16 text-white">Trusted by the Toughest</h3>
@@ -368,8 +443,50 @@
                 </div>
             </div>
         </section>
+        
+        <!-- NEW SECTION: FAQ -->
+        <section id="faq" class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h3>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-lg">
+                    <button class="w-full text-left font-semibold text-white flex justify-between items-center" onclick="toggleFaq(this)">
+                        Is the Titan 30L carry-on compliant for airlines?
+                        <span class="text-amber-500 text-2xl">+</span>
+                    </button>
+                    <div class="faq-content mt-3 text-gray-400 hidden">
+                        <p>Yes, at 20" x 12" x 8", the Titan 30L is designed to meet most major airline carry-on requirements. We recommend checking with your specific airline before travel.</p>
+                    </div>
+                </div>
 
-        <!-- Call To Action / Order Section (Existing) -->
+                <!-- FAQ Item 2 -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-lg">
+                    <button class="w-full text-left font-semibold text-white flex justify-between items-center" onclick="toggleFaq(this)">
+                        How do I clean the 1000D Nylon fabric?
+                        <span class="text-amber-500 text-2xl">+</span>
+                    </button>
+                    <div class="faq-content mt-3 text-gray-400 hidden">
+                        <p>For best results, spot clean the bag with a damp cloth and mild soap. Do not machine wash or tumble dry, as this can damage the waterproof coating and internal structure.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-lg">
+                    <button class="w-full text-left font-semibold text-white flex justify-between items-center" onclick="toggleFaq(this)">
+                        What exactly does the 'Lifetime Guarantee' cover?
+                        <span class="text-amber-500 text-2xl">+</span>
+                    </button>
+                    <div class="faq-content mt-3 text-gray-400 hidden">
+                        <p>Our Lifetime Guarantee covers manufacturing defects in materials and workmanship for the life of the product. It does not cover normal wear and tear, cosmetic damage, or damage caused by misuse.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- SECTION: Call To Action / Order Section -->
         <section id="buy" class="py-20 bg-amber-600">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h3 class="text-4xl font-extrabold text-gray-900 mb-4">Ready to Upgrade Your Carry?</h3>
@@ -390,12 +507,52 @@
         </div>
     </footer>
 
-    <!-- Simple JavaScript for Mobile Menu Toggle -->
+    <!-- Simple JavaScript for Functionality -->
     <script>
+        // Toggle mobile menu
         document.getElementById('menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
+
+        // FAQ Toggle Functionality
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span');
+            
+            // Close other open FAQs
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if (item !== content && !item.classList.contains('hidden')) {
+                    item.classList.add('hidden');
+                    item.previousElementSibling.querySelector('span').textContent = '+';
+                }
+            });
+
+            // Toggle current FAQ
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.textContent = '+';
+            } else {
+                icon.textContent = '-';
+            }
+        }
+        
+        // Color Selection Functionality (changes the hero image placeholder)
+        function selectColor(swatch) {
+            // Remove 'active' class from all swatches
+            document.querySelectorAll('.color-swatch').forEach(s => {
+                s.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked swatch
+            swatch.classList.add('active');
+
+            // Update the hero image placeholder
+            const heroImage = document.getElementById('hero-image');
+            const newSrc = swatch.getAttribute('data-color-placeholder');
+            heroImage.src = newSrc;
+            heroImage.alt = "Titan 30L " + swatch.getAttribute('data-color-name');
+        }
     </script>
 </body>
 </html>
